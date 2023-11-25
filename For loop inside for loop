@@ -1,0 +1,29 @@
+const input = 'turpentine and turtles';
+
+const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+let resultsArray = [];
+
+for (let i = 0; i < input.length; i++) {
+    // console.log(input.length);
+    // console.log(i, 'Outside loop');
+
+    for (let j = 0; j < vowels.length; j++) {
+        // console.log(j, 'Insdie loop');
+
+        if(input[i] === vowels[j]){
+            if(input[i] === 'e'){
+                resultsArray.push('ee');
+            }else if(input[i] === 'u'){
+                resultsArray.push('uu');
+            }
+            else{
+                resultsArray.push(input[i]);
+            }
+        }
+    }
+};
+
+let resultString = (resultsArray.join('').toUpperCase());
+
+console.log(resultString);
